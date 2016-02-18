@@ -9,7 +9,7 @@ $heroPost = $rs[0];
 <html lang="en">
   <head>
     <?php require_once 'views/header.php'; ?>
-
+  <link href="../assets/css/styles/tomorrow-night-eighties.css" rel="stylesheet">
   </head>
 
   <body>
@@ -45,6 +45,7 @@ $heroPost = $rs[0];
           </div><!--/row-->
           <div class="hero-unit-medium span6">
             <h3>Recently posted in: <?php echo $heroPost->categoryName; ?></h3>
+            <p><a href="post.php?pid=<?php echo $heroPost->id; ?>" class="btn btn-primary btn-medium">View this Post &raquo;</a></p>
             <h4><i><?php echo $heroPost->headline?></i></h4>
             <p><?php echo $heroPost->body; ?></p>
             <p><a href="post.php?pid=<?php echo $heroPost->id; ?>" class="btn btn-primary btn-medium">Comment on this Post &raquo;</a></p>
@@ -71,11 +72,14 @@ $heroPost = $rs[0];
     <script src="../assets/js/jquery-1.10.2.js"></script>
     <script src="../assets/js/bootstrap.js"></script>
     <script src="../assets/js/navlogin.js"></script>
+    <script src="../assets/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script>
       $(document).ready( function() {
         $('#home').addClass('active');
       });
     </script>
+    
 <!--     <script src="../assets/js/bootstrap-transition.js"></script>
     <script src="../assets/js/bootstrap-alert.js"></script>
     <script src="../assets/js/bootstrap-modal.js"></script>
