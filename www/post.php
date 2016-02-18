@@ -64,8 +64,13 @@ $showBottomLink = false;
 
           <!-- 12 span units per row -->
           <div class="row-fluid">
-            <div class="span9" id="post">
+            <div class="span9">
               <legend><?php echo $post->headline; ?></legend>
+              <h6>Posted: <?php echo date('F jS, Y', strtotime($post->postDate)); ?></h6>
+            </div>
+          </div>
+          <div class="row-fluid">
+            <div class="span9" id="post">
               <div>
                 <?php echo $post->body; ?>
               </div>
