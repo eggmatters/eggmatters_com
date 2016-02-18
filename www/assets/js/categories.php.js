@@ -4,6 +4,9 @@
  */
 
  $(document).ready(function() {
+   if (categories[0].category == "Poor Mans Framework") {
+     categories.reverse();
+   }
    categoriesCollection = setCategories(categories);
    postsCollection = setPosts(posts);
    attachPostsToCategories(postsCollection, categoriesCollection);
